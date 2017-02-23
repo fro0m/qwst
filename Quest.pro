@@ -1,10 +1,12 @@
-QT += qml quick
+QT += qml quick scxml
 
-CONFIG += c++11
+CONFIG += c++14
 
 SOURCES += main.cpp
 
 RESOURCES += qml.qrc
+
+TARGET = Quest
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
@@ -25,5 +27,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
+else: unix:!android: target.path = /usr/local/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+STATECHARTS += \
+    StateMachine.scxml

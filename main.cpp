@@ -2,6 +2,7 @@
 #include <QQmlApplicationEngine>
 #include <QDebug>
 #include "StateMachine.h"
+#include "datamodel.h"
 
 int main(int argc, char *argv[])
 {
@@ -9,9 +10,9 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
-    StateMachine stateMachine;
+    qmlRegisterType<DataModel>("quest.model", 1, 0, "DataModel");
+    qmlRegisterUncreatableType<StateMachine>("quest.model", 1, 0, "StateMachine", "nope");
     engine.load(QUrl(QLatin1String("qrc:/main.qml")));
-    stateMachine.start();
     return app.exec();
 }
 

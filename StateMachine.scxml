@@ -1,3 +1,45 @@
-<?xml version="1.0" ?>
-<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" name="StateMachine">
+<?xml version="1.0" encoding="UTF-8"?>
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" binding="early" xmlns:qt="http://www.qt.io/2015/02/scxml-ext" name="StateMachine" qt:editorversion="4.2.1">
+    <parallel id="Global">
+        <qt:editorinfo geometry="153.94;184.73;-220.99;-369.29;534.01;813.54" scenegeometry="153.94;184.73;-67.05;-184.56;534.01;813.54"/>
+        <state id="State3">
+            <qt:editorinfo geometry="-76.66;351.88;-124.33;-112.98;391.30;185.35" scenegeometry="77.28;536.61;-47.05;423.63;391.30;185.35"/>
+            <state id="State3On">
+                <qt:editorinfo geometry="-44.33;-6.01;-60;-50;120;100" scenegeometry="32.95;530.60;-27.05;480.60;120;100"/>
+                <transition type="external" event="Transition_3" target="State3Off"/>
+            </state>
+            <state id="State3Off">
+                <qt:editorinfo geometry="129.63;2.37;-60;-50;120;100" scenegeometry="206.91;538.98;146.91;488.98;120;100"/>
+                <transition type="external" event="Transition_3" target="State3On">
+                    <qt:editorinfo endTargetFactors="73.42;53.24"/>
+                </transition>
+            </state>
+        </state>
+        <state id="State2">
+            <qt:editorinfo geometry="-84.38;159.26;-116.61;-122.88;391.30;192.52" scenegeometry="69.56;343.99;-47.05;221.11;391.30;192.52"/>
+            <state id="State2On">
+                <qt:editorinfo geometry="-36.61;-0.36;-60;-50;120;100" scenegeometry="32.95;343.63;-27.05;293.63;120;100"/>
+                <transition type="external" event="Transition_2" target="State2Off"/>
+            </state>
+            <state id="State2Off">
+                <qt:editorinfo geometry="135.34;-16.09;-60;-50;120;100" scenegeometry="204.90;327.90;144.90;277.90;120;100"/>
+                <transition type="external" event="Transition_2" target="State2On">
+                    <qt:editorinfo endTargetFactors="82.42;68.95"/>
+                </transition>
+            </state>
+        </state>
+        <state id="State1">
+            <qt:editorinfo geometry="51.59;-9.62;-252.58;-270.86;494.01;306.86" scenegeometry="205.53;175.11;-47.05;-95.75;494.01;306.86"/>
+            <state id="State1On">
+                <qt:editorinfo geometry="-44.10;-75.23;-124.55;-109.10;220.82;176.90" scenegeometry="161.43;99.88;36.88;-9.22;220.82;176.90"/>
+                <transition type="external" event="Transition_1" target="State1Off"/>
+            </state>
+            <state id="State1Off">
+                <qt:editorinfo geometry="161.43;-106.80;-60;-50;120;100" scenegeometry="366.96;68.31;306.96;18.31;120;100"/>
+                <transition type="external" event="Transition_1" target="State1On">
+                    <qt:editorinfo endTargetFactors="73;62.80"/>
+                </transition>
+            </state>
+        </state>
+    </parallel>
 </scxml>

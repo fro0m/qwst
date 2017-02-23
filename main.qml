@@ -1,12 +1,21 @@
 import QtQuick 2.7
 import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.0
+import quest.model 1.0
+
 
 ApplicationWindow {
     visible: true
     width: 640
     height: 480
-    title: qsTr("Hello World")
+    DataModel {
+        id: dataModel
+
+    }
+    property var titleGenerator: dataModel.titleGenerator
+
+
+    title: titleGenerator.title
 
     SwipeView {
         id: swipeView
@@ -14,6 +23,9 @@ ApplicationWindow {
         currentIndex: tabBar.currentIndex
 
         Page1 {
+            onClicked: {
+                dataModel.stateMachine.submitEvent("Transition_3")
+            }
         }
 
         Page {

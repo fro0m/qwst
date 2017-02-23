@@ -2,7 +2,9 @@ QT += qml quick scxml
 
 CONFIG += c++14
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    datamodel.cpp \
+    statestringgenerator.cpp
 
 RESOURCES += qml.qrc
 
@@ -32,3 +34,7 @@ else: unix:!android: target.path = /usr/local/$${TARGET}/bin
 
 STATECHARTS += \
     StateMachine.scxml
+
+HEADERS += \
+    datamodel.h \
+    statestringgenerator.h

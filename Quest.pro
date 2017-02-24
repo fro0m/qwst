@@ -4,11 +4,15 @@ CONFIG += c++14
 
 SOURCES += main.cpp \
     datamodel.cpp \
-    statestringgenerator.cpp
+    statestringgenerator.cpp \
+    remoteworkerthread.cpp \
+    resourceblockerhthread.cpp
 
 RESOURCES += qml.qrc
 
 TARGET = Quest
+
+DEFINES += MAKE_DEADLOCK
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
@@ -37,4 +41,6 @@ STATECHARTS += \
 
 HEADERS += \
     datamodel.h \
-    statestringgenerator.h
+    statestringgenerator.h \
+    remoteworkerthread.h \
+    resourceblockerhthread.h
